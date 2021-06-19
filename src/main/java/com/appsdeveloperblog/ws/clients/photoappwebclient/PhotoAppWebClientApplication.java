@@ -21,6 +21,9 @@ public class PhotoAppWebClientApplication {
 		return new RestTemplate();
 	}
 	
+	// EN este metodo se configura el WebClient para que se mande el 
+	// JWT en la cabecera Authorization cuando se use para hacer llamadas
+	// a otros recursos en el backend, de forma automática.
 	@Bean
 	public WebClient webClient(ClientRegistrationRepository clientRegistrationrepository,
 			OAuth2AuthorizedClientRepository oAuth2AuthorizedClientRepository
